@@ -6,15 +6,14 @@ body {
 
 /* ===== Logo ===== */
 .logo-img {
-    max-width: 140px;
+    max-width: 180px;
     height: auto;
-    display: block;
-    margin: 4em auto 2em auto;
+    margin-bottom: 1.5rem;
 }
 
 /* ===== Formulário ===== */
 .form-login {
-    margin-bottom: 2.5rem;
+    /* margin-bottom: 2.5rem; */
 }
 .form-login .input-group {
     margin-bottom: 1.2rem;
@@ -88,6 +87,13 @@ body {
     outline: none;
     box-shadow: none;
     border-color: #1db954;
+}
+
+/* Destaque verde em todo o grupo de input ao focar */
+.input-group:focus-within .form-control,
+.input-group:focus-within .input-group-text {
+    border-color: #00FFA2 !important;
+    box-shadow: none !important;
 }
 
 /* ===== Botão Login ===== */
@@ -260,9 +266,67 @@ body {
     z-index: 10;
 }
 @media (min-width: 992px) {
+    body {
+        background: linear-gradient(90deg, #000 0%, #666 100%) !important;
+    }
+    .main-desktop-layout {
+        background: none;
+    }
     .footer-social {
         position: static;
         background: transparent;
         padding-bottom: 2rem;
     }
+    .desktop-form {
+        margin-bottom: 0 !important;
+    }
+
+    .desktop-logo {
+        display: none;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    body, html {
+        height: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .container.d-lg-none {
+        min-height: 100vh;
+        justify-content: flex-start !important;
+        padding-top: 2.5rem !important;
+        padding-bottom: 0 !important;
+    }
+    .logo-img {
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    .footer-social {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 -2px 16px #0001;
+        z-index: 20;
+        padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+}
+
+/* Removendo a classe desktop-logo que não é mais necessária */
+.desktop-logo {
+    display: none;
+}
+
+/* Ajustando o espaçamento do formulário desktop */
+.desktop-form {
+    margin-top: 1rem;
+}
+
+/* Ajustando o espaçamento da área de boas-vindas */
+.desktop-image-area {
+    gap: 2rem !important;
 } 
