@@ -35,7 +35,7 @@ body {
     border: 1px solid #ced4da;
     border-right: 0;
     color: #222;
-    padding: 0.75em 1em;
+    padding: 1.2em 1em;
     display: flex;
     align-items: center;
 }
@@ -54,7 +54,7 @@ body {
     border-left: 0;
     border-right: 0;
     border-radius: 0;
-    padding: 0.75em 1em;
+    padding: 1.2em 1em;
     font-size: 1rem;
     color: #222;
 }
@@ -81,6 +81,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Remove o contorno azul dos inputs ao focar */
+.input-group .form-control:focus, .input-group .form-control:active {
+    outline: none;
+    box-shadow: none;
+    border-color: #1db954;
 }
 
 /* ===== Botão Login ===== */
@@ -165,5 +172,97 @@ body {
     }
     .container {
         padding: 0 0.5rem;
+    }
+}
+
+/* ===== Botões Sociais Circulares ===== */
+.social-icons-row {
+    margin-bottom: 2rem;
+}
+.social-icon-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+    padding: 0;
+    font-size: 1.4rem;
+}
+.social-icon-btn img {
+    width: 28px;
+    height: 28px;
+}
+.social-icon-btn:focus {
+    outline: none;
+    border-color: #1db954;
+    box-shadow: 0 0 0 2px #1db95433;
+}
+.google-icon-btn:hover {
+    border-color: #4285f4;
+    box-shadow: 0 4px 16px #4285f422;
+    background: #f5faff;
+}
+.facebook-icon-btn {
+    background: #1877f2;
+    border: none;
+    color: #fff;
+}
+.facebook-icon-btn i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+.facebook-icon-btn:hover {
+    background: #145db2;
+    box-shadow: 0 4px 16px #1877f222;
+}
+
+/* ===== Botão do X (Twitter) ===== */
+.x-icon-btn {
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    color: #222;
+}
+.x-icon-btn i {
+    color: #222;
+    font-size: 1.5rem;
+}
+.x-icon-btn:hover {
+    background: #f5f5f5;
+    box-shadow: 0 4px 16px #2222;
+    border-color: #222;
+}
+
+/* ===== Link Registrar-se ===== */
+.register-link {
+    color: #399462;
+    font-size: 1rem;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.register-link:hover {
+    color: #1db954;
+    text-decoration: underline;
+}
+
+.footer-social {
+    background: transparent;
+    border-top: none;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+}
+@media (min-width: 992px) {
+    .footer-social {
+        position: static;
+        background: transparent;
+        padding-bottom: 2rem;
     }
 } 
